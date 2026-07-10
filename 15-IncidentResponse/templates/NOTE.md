@@ -1,0 +1,1 @@
+This project is a process/runbook exercise using resources from other projects (e.g. GuardDuty from Project 4, IAM from Project 2) — there is no standalone infrastructure template here. See the README for the investigation and remediation steps.

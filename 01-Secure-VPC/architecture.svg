@@ -1,0 +1,29 @@
+<svg viewBox="0 0 710 320" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="710" height="320" fill="#FFFFFF"/>
+<text x="355.0" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#232F3E">Secure Multi-Tier VPC — Architecture</text>
+<defs>
+      <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L0,6 L9,3 z" fill="#879196"/>
+      </marker>
+    </defs>
+<rect x="40.0" y="70" width="170" height="70" rx="8" fill="#E9EBED" stroke="#879196" stroke-width="1"/>
+<text x="125.0" y="105.0" text-anchor="middle" font-size="12.5" font-weight="600" fill="#232F3E">Internet</text>
+<rect x="270.0" y="70" width="170" height="70" rx="8" fill="#FF9900" stroke="#879196" stroke-width="1"/>
+<text x="355.0" y="105.0" text-anchor="middle" font-size="12.5" font-weight="600" fill="#232F3E">Internet Gateway</text>
+<rect x="500.0" y="70" width="170" height="70" rx="8" fill="#232F3E" stroke="#879196" stroke-width="1"/>
+<text x="585.0" y="97.0" text-anchor="middle" font-size="12.5" font-weight="600" fill="#FFFFFF">Public Subnet (NAT +</text>
+<text x="585.0" y="113.0" text-anchor="middle" font-size="12.5" font-weight="600" fill="#FFFFFF">Bastion)</text>
+<rect x="40.0" y="210" width="170" height="70" rx="8" fill="#FF9900" stroke="#879196" stroke-width="1"/>
+<text x="125.0" y="245.0" text-anchor="middle" font-size="12.5" font-weight="600" fill="#232F3E">NAT Gateway</text>
+<rect x="270.0" y="210" width="170" height="70" rx="8" fill="#232F3E" stroke="#879196" stroke-width="1"/>
+<text x="355.0" y="237.0" text-anchor="middle" font-size="12.5" font-weight="600" fill="#FFFFFF">Private Subnet (App</text>
+<text x="355.0" y="253.0" text-anchor="middle" font-size="12.5" font-weight="600" fill="#FFFFFF">EC2)</text>
+<rect x="500.0" y="210" width="170" height="70" rx="8" fill="#2E7D32" stroke="#879196" stroke-width="1"/>
+<text x="585.0" y="237.0" text-anchor="middle" font-size="12.5" font-weight="600" fill="#FFFFFF">Security Group</text>
+<text x="585.0" y="253.0" text-anchor="middle" font-size="12.5" font-weight="600" fill="#FFFFFF">(least privilege)</text>
+<line x1="210.0" y1="105.0" x2="270.0" y2="105.0" stroke="#879196" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="440.0" y1="105.0" x2="500.0" y2="105.0" stroke="#879196" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="585.0" y1="140" x2="125.0" y2="210" stroke="#879196" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="210.0" y1="245.0" x2="270.0" y2="245.0" stroke="#879196" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="440.0" y1="245.0" x2="500.0" y2="245.0" stroke="#879196" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>
