@@ -19,8 +19,10 @@ Design and deploy a secure, multi-tier AWS network architecture for a web applic
 - Route tables configured per subnet tier
 - Security Groups restricting inbound/outbound traffic
 - Network ACLs as an additional stateless layer of defense
+<!-- This text will not be visible when rendered  ##![Architecture Diagram](./architecture.svg)## -->
 
-![Architecture Diagram](./architecture.svg)
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/92d4fcb2-9563-4829-b585-29c81a28ba47" />
+
 
 ## Implementation Steps
 
