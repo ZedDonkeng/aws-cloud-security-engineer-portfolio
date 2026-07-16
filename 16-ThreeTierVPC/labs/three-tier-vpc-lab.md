@@ -1,7 +1,53 @@
 # Constructing a Segmented Three-Layer VPC Environment in AWS
 
-## Overview
-This exercise walks through standing up a three-layer VPC architecture (front-end, mid-tier, and data layer) entirely from the ground up. Emphasis is placed on address space planning, route propagation, NAT-based outbound access, and NACL-driven traffic filtering between layers.
+# Three-Tier Amazon VPC Architecture
+
+## Project Overview
+
+This project demonstrates the design and deployment of a production-style three-tier Amazon VPC architecture from the ground up using AWS best practices. The environment consists of public (web), private application, and private database tiers, providing a secure, scalable, and highly organized network infrastructure.
+
+The implementation focuses on network segmentation, IP address planning, secure routing, and controlled traffic flow between application layers. Core AWS networking components—including custom VPCs, public and private subnets, route tables, an Internet Gateway, a NAT Gateway, and Network ACLs (NACLs)—are configured to deliver secure connectivity while enforcing least-privilege network access.
+
+---
+
+## Objectives
+
+- Design a secure three-tier AWS network architecture.
+- Implement public and private subnet segmentation.
+- Configure secure internet connectivity using an Internet Gateway and NAT Gateway.
+- Control network traffic using Route Tables and Network ACLs.
+- Apply AWS networking and security best practices.
+- Build a reusable infrastructure suitable for production environments.
+
+---
+
+## Technologies Used
+
+- Amazon VPC
+- Public & Private Subnets
+- Route Tables
+- Internet Gateway (IGW)
+- NAT Gateway
+- Network ACLs (NACLs)
+- IPv4 CIDR Planning
+- AWS Console / cloudformation (optional)
+
+---
+
+## Skills Demonstrated
+
+- AWS Network Architecture
+- VPC Design and Deployment
+- CIDR Planning and Subnetting
+- Network Segmentation
+- Secure Routing Configuration
+- Internet and Private Connectivity
+- Layered Network Security
+- AWS Security Best Practices
+- Infrastructure Design
+  
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/95e84766-4db9-4274-b019-b09b6286c011" />
+
 
 ## Walkthrough
 
