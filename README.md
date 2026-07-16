@@ -31,7 +31,7 @@ Each project below is self-contained in its own folder with:
 | 13 | [Amazon Inspector Vulnerability Assessment](./13-Inspector) | Vulnerability scanning, CVE triage |
 | 14 | [VPC Flow Logs Analysis](./14-VPCFlowLogs) | Network traffic capture and analysis |
 | 15 | [Incident Response Simulation](./15-IncidentResponse) | GuardDuty alert investigation, NIST IR lifecycle |
-
+| 16 | [Three-Tier VPC Architecture](./16-ThreeTierVPC) | Segmented VPC design, NAT/IGW routing, tiered NACL isolation
 ## Folder Structure
 
 ```
