@@ -1,0 +1,49 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Provisions an IAM role and instance profile that grant an EC2 instance Systems Manager (SSM) connectivity."
+
+Parameters:
+  RoleFriendlyName:
+    Type: String
+    Default: EC2SsmAccessRole
+    Description: "The name assigned to the IAM role used by EC2 instances for SSM connectivity."
+
+Resources:
+  # IAM role assumable by EC2 instances, granting SSM Managed Instance Core permissions
+  SsmEnabledInstanceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Ref RoleFriendlyName
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: AllowEc2ServiceAssumption
+            Effect: Allow
+            Principal:
+              Service: ec2.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+      Tags:
+        - Key: Purpose
+          Value: EC2-SSM-Connectivity
+
+  # Instance profile that wraps the role above for attachment to EC2 instances
+  SsmEnabledInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      InstanceProfileName: !Sub "${RoleFriendlyName}-Profile"
+      Roles:
+        - !Ref SsmEnabledInstanceRole
+
+Outputs:
+  IamRoleName:
+    Description: "Name of the IAM role granting EC2 instances SSM access."
+    Value: !Ref SsmEnabledInstanceRole
+
+  IamRoleArn:
+    Description: "ARN of the IAM role granting EC2 instances SSM access."
+    Value: !GetAtt SsmEnabledInstanceRole.Arn
+
+  InstanceProfileName:
+    Description: "Name of the instance profile to attach to EC2 instances."
+    Value: !Ref SsmEnabledInstanceProfile
